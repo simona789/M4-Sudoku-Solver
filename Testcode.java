@@ -10,6 +10,7 @@ public class Testcode {
                                 {0,9,6,3,8,2,5,0,0},
                                 {7,0,0,9,1,0,0,0,0},
                                 {0,0,0,0,0,5,0,0,3}};
-        System.out.println(SudokuSolver.isSafe(sudokuEasy, 8, 6, 6));
+        System.out.println(SudokuSolver.isSafe(sudokuEasy, 7, 5, 6)); //!! remember row/col starts with 0
+        System.out.println(SudokuSolver.isSafe(sudokuEasy, 0, 0, 3));
     }
 }
