@@ -30,11 +30,11 @@ public class Solver { //Inspiration from https://www.geeksforgeeks.org/sudoku-ba
 
     static void printSolvedBoard(int[][] board) {
         for (int row = 0; row < Safety.GRID_SIZE; row++) {
-            if (row % 3 == 0 && row != 0) { // every third row
+            if (row % 3 == 0 && row != 0) { //every third row
                 System.out.println("------+-------+------");
             }
             for (int column = 0; column < Safety.GRID_SIZE; column++) {
-                if (column % 3 == 0 && column != 0) { // every third column
+                if (column % 3 == 0 && column != 0) { //every third column
                     System.out.print("| ");
                 }
                 System.out.print(board[row][column] == 0 ? "." : board[row][column]); //replace 0 with .
@@ -45,7 +45,7 @@ public class Solver { //Inspiration from https://www.geeksforgeeks.org/sudoku-ba
     }
     
     static void printBoard(int[][] board) {
-        System.out.println("");
+        System.out.println();
         System.out.println("Original board:");
         System.out.println();
         printSolvedBoard(board);

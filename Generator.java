@@ -41,7 +41,7 @@ public class Generator {  //Inspiration: https://www.geeksforgeeks.org/program-s
     
         //try numbers 1-9 in the current cell
         for (int num = 1; num <= Safety.GRID_SIZE; num++) {
-            if (Safety.isValidPlacement(board, row, col, num)) { //check if num is safe
+            if (Safety.isValidPlacement(board, row, col, num)) { //check if num is safe 
                 board[row][col] = num;
     
                 //recursively fill the rest of the board
@@ -71,7 +71,7 @@ public class Generator {  //Inspiration: https://www.geeksforgeeks.org/program-s
         }
     }
 
-    //generate a sudoku grid with K empty cells
+    //generate sudoku grid with K empty cells
     static int[][] sudokuGenerator(int k) {
         int[][] board = new int[9][9];
 
@@ -87,7 +87,7 @@ public class Generator {  //Inspiration: https://www.geeksforgeeks.org/program-s
 
         for (int[] row : sudoku) {
             for (int cell : row) {
-                System.out.print(cell + ","); //created that way to copy paste into SudokuTestcode.java
+                System.out.print(cell + ","); //created to copy paste into SudokuTestcode.java
             }
             System.out.println();
         }
