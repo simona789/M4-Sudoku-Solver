@@ -72,7 +72,7 @@ public class Generator {  //Inspiration: https://www.geeksforgeeks.org/program-s
     }
 
     //generate sudoku grid with K empty cells
-    static int[][] sudokuGenerator(int k) {
+    static int[][] generateSudoku(int k) {
         int[][] board = new int[9][9];
 
         fillDiagonal(board);
@@ -82,15 +82,12 @@ public class Generator {  //Inspiration: https://www.geeksforgeeks.org/program-s
         return board;
     }
 
-    public static void main(String[] args) {
-        int[][] sudoku = sudokuGenerator(40);
-
-        for (int[] row : sudoku) {
+    static void printGeneratedBoard(int[][] board) {
+        for (int[] row : board) {
             for (int cell : row) {
-                System.out.print(cell + ","); //created to copy paste into SudokuTestcode.java
+                System.out.print(cell + ",");
             }
             System.out.println();
         }
     }
-
 }

@@ -3,7 +3,7 @@ public class Testcode {
 
     public static void main(String[] args) {
         //safety
-        int sudokuEasy [][] = { {0,4,0,0,0,7,0,0,0},    //0  !! remember row/column starts with 0
+        int sudokuEasy [][] = {{0,4,0,0,0,7,0,0,0},    //0  !! remember row/column starts with 0
                                 {0,0,1,8,9,4,0,0,0},    //1
                                 {8,2,7,0,6,3,0,9,0},    //2
                                 {0,0,0,7,0,8,0,0,4},    //3
@@ -14,7 +14,7 @@ public class Testcode {
                                 {0,0,0,0,0,5,0,0,3}};
         
 
-        int sudokuEvil [][] = { {0,7,0,2,0,0,0,8,0},
+        int sudokuEvil [][] = {{0,7,0,2,0,0,0,8,0},
                                 {0,0,0,0,1,6,0,5,7},
                                 {0,8,6,7,0,0,0,0,0},
                                 {0,0,0,0,0,0,0,2,0},
@@ -35,24 +35,24 @@ public class Testcode {
                                     {9,5,7,0,6,2,3,0,1}};
         
         int sudokuGenerated50 [][] = {{6,0,0,1,2,0,0,0,0},
-            {0,0,9,0,3,0,1,8,4},
-            {7,0,4,0,0,0,0,6,0},
-            {1,0,0,0,8,0,0,0,0},
-            {4,0,0,7,1,5,3,0,0},
-            {0,0,7,0,4,0,0,0,0},
-            {0,0,0,0,0,1,9,0,7},
-            {0,0,1,0,0,0,6,4,8},
-            {0,0,6,8,0,0,0,2,1}};
+                                    {0,0,9,0,3,0,1,8,4},
+                                    {7,0,4,0,0,0,0,6,0},
+                                    {1,0,0,0,8,0,0,0,0},
+                                    {4,0,0,7,1,5,3,0,0},
+                                    {0,0,7,0,4,0,0,0,0},
+                                    {0,0,0,0,0,1,9,0,7},
+                                    {0,0,1,0,0,0,6,4,8},
+                                    {0,0,6,8,0,0,0,2,1}};
 
         int sudokuGenerated80 [][] = {{0,0,0,0,0,0,0,0,0},
-            {0,0,0,0,0,0,0,0,0},
-            {0,0,0,0,0,0,0,0,0},
-            {0,0,0,0,0,0,0,0,0},
-            {0,0,0,0,0,0,0,0,0},
-            {0,0,0,0,0,0,0,0,0},
-            {0,0,0,0,0,0,0,0,0},
-            {0,0,0,0,0,0,0,0,0},
-            {6,0,0,0,0,0,0,0,0}};
+                                    {0,0,0,0,0,0,0,0,0},
+                                    {0,0,0,0,0,0,0,0,0},
+                                    {0,0,0,0,0,0,0,0,0},
+                                    {0,0,0,0,0,0,0,0,0},
+                                    {0,0,0,0,0,0,0,0,0},
+                                    {0,0,0,0,0,0,0,0,0},
+                                    {0,0,0,0,0,0,0,0,0},
+                                    {6,0,0,0,0,0,0,0,0}};
 
         //test safety
         System.out.println("true:" + Safety.isRowSafe(sudokuEasy, 0, 3));
@@ -77,7 +77,7 @@ public class Testcode {
         Solver.printBoard(sudokuEvil);
         
         //test generator
-        int[][] sudoku = Generator.sudokuGenerator(40);
+        int[][] sudoku = Generator.generateSudoku(40);
 
         for (int[] row : sudoku) {
             for (int cell : row) {
@@ -87,7 +87,7 @@ public class Testcode {
         }
         Solver.printBoard(sudoku);
 
-        int[][] sudoku2 = Generator.sudokuGenerator(40);
+        int[][] sudoku2 = Generator.generateSudoku(40);
         Solver.printBoard(sudoku2);
 
     }
